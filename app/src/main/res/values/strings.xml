@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TakeKit</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="servicedesc">This is just a test service</string>
+    <string name="aiddescription">This is just an aid</string>
+</resources>
