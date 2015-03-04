@@ -1,9 +1,12 @@
 package com.ovenbits.takekit;
 
+import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.telephony.TelephonyManager;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -14,6 +17,15 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        TextView textView = (TextView) findViewById(R.id.text);
+        TelephonyManager tManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+        String uid = tManager.getDeviceId();
+        textView.setText("You just setup a TakeKit NFC tag on this device! \n The device ID is: \n" + uid);
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

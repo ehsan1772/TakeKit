@@ -117,7 +117,8 @@ public class ReaderFragment extends Fragment implements NfcAdapter.ReaderCallbac
 
         @Override
         protected void onProgressUpdate(String... values) {
-            text.setText(values[0]);
+         //   text.setText(values[0]);
+            mMessage.setText(mSpinner.getSelectedItem().toString() + " just checked out a device with this id: \n" + values[0]);
             super.onProgressUpdate(values);
         }
     }

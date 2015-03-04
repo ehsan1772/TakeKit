@@ -8,8 +8,31 @@
                 android:paddingBottom="@dimen/activity_vertical_margin"
                 tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/image"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/nfc_4"/>
+
     <TextView
-        android:text="@string/hello_world"
+        android:id="@+id/congrats"
+        android:layout_margin="20dp"
+        android:layout_below="@id/image"
+        android:textSize="32sp"
+        android:text="Congratulations!"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_below="@id/congrats"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
