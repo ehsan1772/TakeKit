@@ -1,0 +1,7 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+                android:oneshot="true">
+    <item android:drawable="@drawable/nfc_1" android:duration="200" />
+    <item android:drawable="@drawable/nfc_2" android:duration="200" />
+    <item android:drawable="@drawable/nfc_3" android:duration="200" />
+    <item android:drawable="@drawable/nfc_4" android:duration="200" />
+</animation-list>

@@ -105,29 +105,16 @@ public class MainActivity extends ActionBarActivity implements NfcAdapter.Reader
             Tag tag = params[0];
 
             IsoDep isoDep = IsoDep.get(tag);
-            int messageCounter = 0;
             try {
                 isoDep.connect();
-          //      isoDep.transceive()
-              //  byte[] response = null;
-             //   byte[] id = createSelectAidApdu(AID_ANDROID);
-
                 Log.d(TAG, "sending AID " + createSelectAidApdu(AID_ANDROID));
                   byte[] response = isoDep.transceive(createSelectAidApdu(AID_ANDROID));
-
-              //  isoDep.transceive()
-             //   while (isoDep.isConnected() && !Thread.interrupted()) {
-                  //  String message = "Message from IsoDep " + messageCounter++;
-                   // response = isoDep.transceive(message.getBytes());
                     Log.d("Tag is=", new String(response));
                     publishProgress(new String(response));
-
-           //     }
                 isoDep.close();
             }
             catch (IOException e) {
                 e.printStackTrace();
-                // onMessageReceived.onError(e);
             }
 
             Log.d(TAG, "returning");
